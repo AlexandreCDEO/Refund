@@ -11,6 +11,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Testando</h1>
+    <header class="container">
+        <img src="assets/logo.svg" alt="Logo Refund">
+    </header>
+
+    <div class="container flex gap-1.25">
+        <section class="padding-base bg-base br-base">
+            <h1>Solicitação de reembolso</h1>
+            <p>Informe os dados da despesa para solicitar reembolso. 
+                A despesa será analisada e reembolsada em até 30 dias.
+            </p>
+
+            <form class="flex flex-col gap-2">
+                <div class="inputsForm">
+                    <div class="input-wrapper">
+                        <label for="title">título da despesa</label>
+                        <input type="text" name="title" id="title" required>
+                    </div>
+
+                    <div class="flex gap-1">
+                        <div class="input-wrapper flex-1">
+                            <label for="category">categoria</label>
+                            <select id="category" name="category" required>
+                                <option value="food">Alimentação</option>
+                                <option value="accommodation">Hospedagem</option>
+                                <option value="services">Serviços</option>
+                                <option value="transport">Transporte</option>
+                                <option value="others">Outros</option>
+                              </select>
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="total">valor</label>
+                            <input type="text" name="total" id="total" placeholder="R$ 0,00" required>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Adicionar Despesa</button>
+            </form>
+        </section>
+
+        <aside class="padding-base bg-base br-base">
+            <header class="header-aside">
+                <span>Minhas solicitaçãoes <small>6 despesas</small></span>
+                <span><small>R$</small><strong>1420,57</strong></span>
+            </header>
+            <section>
+                <ul>
+                    <li>
+                        <img src="assets/food.svg" alt="ícone de talheres para alimentação">
+                        <div>
+                            <span>Almoço</span>
+                            <span>Alimentação</span>
+                        </div>
+                        <div>
+                            <span><small>R$</small><strong>34,78</strong></span>
+                            <img src="assets/remove.svg" alt="ícone para remover ítem da lista">
+                        </div>
+                    </li>
+
+                    <li>
+                        <img src="assets/food.svg" alt="ícone de talheres para alimentação">
+                        <div>
+                            <span>Almoço</span>
+                            <span>Alimentação</span>
+                        </div>
+                        <div>
+                            <span><small>R$</small><strong>34,78</strong></span>
+                            <img src="assets/remove.svg" alt="ícone para remover ítem da lista">
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
 </body>
 </html>
